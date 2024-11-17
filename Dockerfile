@@ -14,4 +14,4 @@ RUN npm install --include=dev
 COPY . .
 
 # Run tests by default
-CMD ["npm", "test"]
+CMD ["npm", "run", "coverage"]
