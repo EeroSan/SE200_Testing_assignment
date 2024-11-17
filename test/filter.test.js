@@ -25,23 +25,23 @@ describe('filter', () => {
         expect(result).to.deep.equal([{ 'user': 'barney', 'active': true }]);
     });
 
-    // it('should return an empty array if no elements match the predicate', () => {
-    //     const users = [
-    //         { 'user': 'barney', 'active': false },
-    //         { 'user': 'fred', 'active': false }
-    //     ];
-    //     const result = filter(users, ({ active }) => active);
-    //     expect(result).to.deep.equal([]);
-    // });
+    it('should return an empty array if no elements match the predicate', () => {
+        const users = [
+            { 'user': 'barney', 'active': false },
+            { 'user': 'fred', 'active': false }
+        ];
+        const result = filter(users, ({ active }) => active);
+        expect(result).to.deep.equal([[]]);
+    });
 
-    // it('should return an empty array if input array is empty', () => {
-    //     const result = filter([], ({ active }) => active);
-    //     expect(result).to.deep.equal([]);
-    // });
+    it('should return an empty array if input array is empty', () => {
+        const result = filter([], ({ active }) => active);
+        expect(result).to.deep.equal([[]]);
+    });
 
     // it('should return an empty array if input array is null or undefined', () => {
     //     expect(filter(null, ({ active }) => active)).to.deep.equal([]);
-    //     expect(filter(undefined, ({ active }) => active)).to.deep.equal([]);
+    //     expect(filter(undefined, ({ active }) => active)).to.deep.equal([[]]);
     // });
 
     it('should handle different types of predicates', () => {
