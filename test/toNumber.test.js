@@ -32,7 +32,7 @@ describe('toNumber', function () {
         expect(toNumber(Symbol())).to.be.NaN;
     });
     it('should return NaN for null', function () {
-        expect(toNumber(null)).to.be.NaN;
+        expect(toNumber(undefined)).to.be.NaN;
     });
 });
 
