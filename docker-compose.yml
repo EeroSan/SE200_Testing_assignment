@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  node-app:
+    build: .
+    container_name: node_test_app
+    stdin_open: true
+    tty: true
