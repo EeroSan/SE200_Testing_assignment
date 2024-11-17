@@ -31,5 +31,8 @@ describe('toNumber', function () {
     it('should return NaN for symbols', function () {
         expect(toNumber(Symbol())).to.be.NaN;
     });
+    it('should return NaN for null', function () {
+        expect(toNumber(null)).to.be.NaN;
+    });
 });
 
