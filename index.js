@@ -1,1 +1,19 @@
+import add from './src/add.js';
+import camelCase from './src/camelCase.js';
+import filter from './src/filter.js';
+import isObject from './src/isObject';
+import isSymbol from './src/isSymbol';
+import map from './src/map.js';
+import memoize from './src/memoize.js';
+import toFinite from './src/toFinite.js';
+import toNumber from './src/toNumber.js';
+import toString from './src/toString.js';
+import upperFirst from './src/upperFirst.js';
+import words from './src/words.js';
+
+
 console.log("Hello World");
+
+
+
+
