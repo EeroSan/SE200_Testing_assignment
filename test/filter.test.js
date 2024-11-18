@@ -39,10 +39,10 @@ describe('filter', () => {
         expect(result).to.deep.equal([[]]);
     });
 
-    // it('should return an empty array if input array is null or undefined', () => {
-    //     expect(filter(null, ({ active }) => active)).to.deep.equal([]);
-    //     expect(filter(undefined, ({ active }) => active)).to.deep.equal([[]]);
-    // });
+    it('should return an empty array if input array is null or undefined', () => {
+        expect(filter(null, ({ active }) => active)).to.deep.equal([[]]);
+        expect(filter(undefined, ({ active }) => active)).to.deep.equal([[]]);
+    });
 
     it('should handle different types of predicates', () => {
         const numbers = [1, 2, 3, 4, 5];

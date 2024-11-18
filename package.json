@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
       "test": "mocha",
-        "coverage": "c8 --reporter=lcov npm test",
+        "coverage": "c8 --reporter=lcov --reporter=text npm test npm test ",
       "report-coverage": "npm run coverage && cat ./coverage/lcov.info | coveralls"
     },
     "author": "Eero Santala",
