@@ -28,6 +28,10 @@ describe('toString', () => {
         expect(toString(undefined)).to.equal('');
     });
 
+    it('should return the string representation of a string', () => {
+        expect(toString('string').to.equal('string'));
+    });
+
     it('should return the string representation of a number', () => {
         expect(toString(123)).to.equal('123');
     });
