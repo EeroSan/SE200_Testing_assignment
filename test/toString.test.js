@@ -29,7 +29,7 @@ describe('toString', () => {
     });
 
     it('should return the string representation of a string', () => {
-        expect(toString('string').to.equal('string'));
+        expect(toString('string')).to.equal('string');
     });
 
     it('should return the string representation of a number', () => {
