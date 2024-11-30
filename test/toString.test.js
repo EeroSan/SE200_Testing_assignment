@@ -40,10 +40,6 @@ describe('toString', () => {
         expect(toString(-123)).to.equal('-123');
     });
 
-    it('should return the string representation of an array', () => {
-        expect(toString([1, 2, 3])).to.equal('1,2,3');
-    });
-
     it('should return the string representation of a symbol', () => {
         const symbol = Symbol('test');
         expect(toString(symbol)).to.equal('Symbol(test)');
@@ -65,4 +61,26 @@ describe('toString', () => {
     it('should return "-0" for -0', () => {
         expect(toString(-0)).to.equal('-0');
     });
+
+    // The tests for an array as the input will be completed next
+    it('should return an empty string for empty array', () => {
+        expect(toString([])).to.equal('');
+    });
+
+    it('should return the string representation of an array', () => {
+        expect(toString([1, 2, 3])).to.equal('1,2,3');
+    });
+
+    it('should return the string representation of a nested array', () => {
+        expect(toString([1, [2, 3], 4])).to.equal('1,2,3,4');
+    });
+
+    it('should return the string representation of an array with mixed types', () => {
+        expect(toString(['string', true, 2])).to.equal('string,true,2');
+    });    
+
+    it('should return the string representation of an array with null types', () => {
+        expect(toString([1, null, undefined, 4])).to.equal('1,,,4');
+    });    
+
 });
