@@ -64,4 +64,8 @@ describe('toFinite', function() {
         expect(toFinite(true)).to.equal(1);
         expect(toFinite(false)).to.equal(0);
     });
+
+    it('should convert empty string to 0', function() {
+        expect(toFinite('')).to.equal(0);
+    });
 });
