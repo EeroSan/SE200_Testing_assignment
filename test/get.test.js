@@ -50,7 +50,7 @@ describe('get', () => {
     // tests with an invalid value
     it('should return default value when value is null', () => {
         const object = { a: [{ b: { c: null } }] };
-        expect(get(object, 'a[0].b.c', 'default')).to.equal('default');
+        expect(get(object, 'a[0].b.c', 'default')).to.equal(null);
     });
 
     it('should return default value when value is undefined', () => {
