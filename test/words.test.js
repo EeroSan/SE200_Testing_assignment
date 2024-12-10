@@ -17,12 +17,12 @@ describe('words', () => {
         expect(result).to.deep.equal([]);
     });
 
-    it.skip('should handle strings with unicode characters', () => {
+    it('should handle strings with unicode characters', () => {
         const result = words('你好，世界');
         expect(result).to.deep.equal(['你好', '世界']);
     });
 
-    it.skip('should handle strings with numbers', () => {
+    it('should handle strings with numbers', () => {
         const result = words('abc123 def456');
         expect(result).to.deep.equal(['abc123', 'def456']);
     });

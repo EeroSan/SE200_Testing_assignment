@@ -20,11 +20,11 @@ import { expect } from 'chai';
 import toString from '../src/toString.js';
 
 describe('toString', () => {
-    it.skip('should return an empty string for null', () => {
+    it('should return an empty string for null', () => {
         expect(toString(null)).to.equal('');
     });
 
-    it.skip('should return an empty string for undefined', () => {
+    it('should return an empty string for undefined', () => {
         expect(toString(undefined)).to.equal('');
     });
 

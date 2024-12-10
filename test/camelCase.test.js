@@ -18,36 +18,36 @@ import camelCase from '../src/camelCase.js'
 describe('camelCase', () => { 
 
     // tests for edge cases
-    it.skip('should return empty string for empty input', () => {
+    it('should return empty string for empty input', () => {
         expect(camelCase('')).to.equal('');
     });
 
-    it.skip('should return single-word-input as one word all lowercase', () => {
+    it('should return single-word-input as one word all lowercase', () => {
         expect(camelCase('FOO')).to.equal('foo');
     });
 
     // tests for working cases
-    it.skip('should return camelCase of separated words', () => {
+    it('should return camelCase of separated words', () => {
         expect(camelCase('Foo Bar')).to.equal('fooBar');
     });
 
-    it.skip('should return camelCase of CAPS WORDS', () => {
+    it('should return camelCase of CAPS WORDS', () => {
         expect(camelCase('FOO BAR')).to.equal('fooBar');
     });
 
-    it.skip('should return camelCase of underscore_words', () => {
+    it('should return camelCase of underscore_words', () => {
         expect(camelCase('Foo_Bar')).to.equal('fooBar');
     });
 
-    it.skip('should return camelCase of words with extra lines', () => {
+    it('should return camelCase of words with extra lines', () => {
         expect(camelCase('---Foo-Bar---')).to.equal('fooBar');
     });
 
-    it.skip('should return camelCase of words with extra underscores', () => {
+    it('should return camelCase of words with extra underscores', () => {
         expect(camelCase('___Foo_Bar___')).to.equal('fooBar');
     });
 
-    it.skip('should return camelCase for mixed spearators', () => {
+    it('should return camelCase for mixed spearators', () => {
         expect(camelCase('foo_bar-test')).to.equal('fooBarTest');
     });
 

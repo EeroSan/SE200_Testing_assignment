@@ -25,7 +25,7 @@ describe('filter', () => {
         expect(result).to.deep.equal([{ 'user': 'barney', 'active': true }]);
     });
 
-    it.skip('should return an empty array if no elements match the predicate', () => {
+    it('should return an empty array if no elements match the predicate', () => {
         const users = [
             { 'user': 'barney', 'active': false },
             { 'user': 'fred', 'active': false }
@@ -34,12 +34,12 @@ describe('filter', () => {
         expect(result).to.deep.equal([]);
     });
 
-    it.skip('should return an empty array if input array is empty', () => {
+    it('should return an empty array if input array is empty', () => {
         const result = filter([], ({ active }) => active);
         expect(result).to.deep.equal([]);
     });
 
-    it.skip('should return an empty array if input array is null or undefined', () => {
+    it('should return an empty array if input array is null or undefined', () => {
         expect(filter(null, ({ active }) => active)).to.deep.equal([[]]);
         expect(filter(undefined, ({ active }) => active)).to.deep.equal([]);
     });
